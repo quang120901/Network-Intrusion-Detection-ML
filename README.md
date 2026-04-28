@@ -4,8 +4,6 @@
 
 Dự án xây dựng hệ thống phát hiện xâm nhập mạng (Network Intrusion Detection System - NIDS) sử dụng Machine Learning trên dataset **CIC-IDS2017** của Canadian Institute for Cybersecurity.
 
-Pipeline gồm 6 giai đoạn chính: EDA & Preprocessing → Class Balancing → Feature Selection → Model Training → Model Evaluation → Real-time Alert Deployment.
-
 ---
 
 ## 📁 Project Structure
