@@ -217,7 +217,7 @@ File: `src/03_feature_selection.py`
 | Quang | Class Balancing - SMOTE (Bước 2) | ✅ Hoàn thành |
 | Minh Tâm | Feature Selection (Bước 3) | ✅ Hoàn thành |
 | Hoài Tâm | Model Training & Evaluation (Bước 4) | ✅ Hoàn thành |
-| Quân | Real-time Deployment & README (Bước 5) | ✅ Hoàn thành |
+| Quân | Real-time Deployment (Bước 5) | ✅ Hoàn thành |
 
 ---
 
