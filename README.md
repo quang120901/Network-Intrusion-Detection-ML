@@ -65,7 +65,7 @@ Dataset sử dụng: **CIC-IDS2017** — Canadian Institute for Cybersecurity
 
 ```bash
 # 1. Clone repo
-git clone https://github.com/YOUR_USERNAME/Network-Intrusion-Detection-ML.git
+git clone https://github.com/quang120901/Network-Intrusion-Detection-ML.git
 cd Network-Intrusion-Detection-ML
 
 # 2. Cài thư viện
