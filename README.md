@@ -197,15 +197,36 @@ File: `src/03_feature_selection.py`
 
 ## 📦 Model Comparison (Cập nhật sau)
 
-| Model | Accuracy | Precision | Recall | F1-Score |
-|-------|----------|-----------|--------|----------|
-| Logistic Regression | - | - | - | - |
-| SVM | - | - | - | - |
-| Naive Bayes | - | - | - | - |
-| KNN | - | - | - | - |
-| **Random Forest** | - | - | - | - |
+| Model | Accuracy | Precision (W) | Recall (W) | F1 (Weighted) | F1 (Macro) | Attack Recall (M) | Train Time (s) |
+|-------|----------|----------------|------------|----------------|------------|-------------------|----------------|
+| Logistic Regression | 62.10% | 93.55% | 62.10% | 71.45% | 31.08% | 74.57% | 10.8 |
+| SVM (LinearSVC) | 56.90% | 93.11% | 56.90% | 67.01% | 25.97% | 74.64% | 19.5 |
+| Naive Bayes | 17.33% | 93.72% | 17.33% | 20.37% | 27.26% | 58.78% | 0.1 |
+| KNN | 88.50% | 97.23% | 88.50% | 92.18% | 44.52% | 78.33% | 0.1 |
+| **Random Forest** | **93.03%** | **99.36%** | **93.03%** | **95.98%** | **63.31%** | **86.70%** | 21.5 |
 
-> Bảng sẽ được cập nhật sau khi hoàn thành Bước 4 - Model Training.
+**Best Model:** `Random Forest`
+
+**Lý do chọn Random Forest cho bước deploy:**
+- Cho kết quả tổng thể cao nhất trên cả `Accuracy`, `F1 (Weighted)`, `F1 (Macro)` và `Attack Recall (M)`.
+- Phù hợp hơn cho IDS vì `Attack Recall (M)` cao hơn các model còn lại, giúp giảm nguy cơ bỏ sót tấn công.
+- Theo `dataset/attack_recall_per_class.csv`, Random Forest nhận diện rất tốt hầu hết attack classes lớn như `DDoS`, `DoS Hulk`, `PortScan`, `FTP-Patator`, `Heartbleed`.
+
+**Điểm cần lưu ý:**
+- Một số lớp hiếm vẫn khó, đặc biệt `Web Attack - Brute Force` và `Infiltration`, nên đây là vùng cần cải thiện thêm nếu muốn tối ưu hệ thống thực tế.
+
+**Output của bước 4:**
+- `dataset/model_comparison.csv`
+- `dataset/attack_recall_per_class.csv`
+- `dataset/classification_reports.json`
+- `models/random_forest.pkl`
+- `models/logistic_regression.pkl`
+- `models/svm_linearsvc.pkl`
+- `models/naive_bayes.pkl`
+- `models/knn.pkl`
+- `images/confusion_matrices.png`
+- `images/model_comparison.png`
+- `images/attack_recall_heatmap.png`
 
 ---
 
