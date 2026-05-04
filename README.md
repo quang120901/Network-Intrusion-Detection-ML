@@ -195,7 +195,7 @@ File: `src/03_feature_selection.py`
 
 ---
 
-## 📦 Model Comparison (Cập nhật sau)
+## 📦 Model Comparison (Hoàn thành)
 
 | Model | Accuracy | Precision (W) | Recall (W) | F1 (Weighted) | F1 (Macro) | Attack Recall (M) | Train Time (s) |
 |-------|----------|----------------|------------|----------------|------------|-------------------|----------------|
